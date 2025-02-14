@@ -10,9 +10,10 @@ const center = {
 }
 
 export default function Map() {
+  const MAPS_API = process.env.GOOGLE_MAPS_API
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey:'AIzaSyBvHvy02RfNclJleaFf8XeaMgVdoaaq7IA',
+    googleMapsApiKey:MAPS_API,
   })
 
   const [map, setMap] = useState(null)
